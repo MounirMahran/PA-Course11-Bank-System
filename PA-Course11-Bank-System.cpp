@@ -2,39 +2,29 @@
 //
 
 #include <iostream>
-#include "clsBankClient.h"
+#include"ClsBankClient.h"
 using namespace std;
+
+
 int main()
 {
-    clsBankClient Client1 = clsBankClient::Find("A101");
-    if (!Client1.IsEmpty())
-    {
-        cout << "\nClient Found :-)\n";
-    }
-    else
-    {
-        cout << "\nClient Was not Found :-(\n";
-    }
 
-    Client1.Print();
-
-    clsBankClient Client2 = clsBankClient::Find("A101", "1234");
-    if (!Client2.IsEmpty())
-    {
-        cout << "\nClient Found :-)\n";
-    }
-    else
-    {
-        cout << "\nClient Was not Found :-(\n";
-    }
-    Client2.Print();
+	
+	ClsMainScreen::ShowMainMenueScreen();
+       system("pause>0");
+       return 0;
 
 
-    cout << "\nIs Client Exist? " << clsBankClient::IsClientExist("A101");
 
+	/*ClsBankClient Client1= ClsBankClient::Find("A101");
+	Client1.Print();
+	ClsBankClient Client2 = ClsBankClient::Find("A101", "1239");
+	Client2.Print();
+	cout << endl;
+	cout << "Is Client Exist: " << endl;
+	cout<<Client2.IsClientExist("A108");*/
+	
 
-    system("pause>0");
-    return 0;
 }
 
 // Run program: Ctrl + F5 or Debug > Start Without Debugging menu
